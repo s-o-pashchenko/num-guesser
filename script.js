@@ -25,3 +25,17 @@ function guessNum() {
         alert("No, you're wrong. Try again."); // Notify the user of an incorrect guess
     }
 }
+
+function validateInputFirst() {
+    let inputElement = document.getElementById("guess");
+    let inputValue = parseInt(inputElement.value);
+    if (inputValue > 100) {
+        inputElement.value = "100";
+    } else if (isNaN(inputValue)) {
+        inputElement.value = "";
+    } else if (inputValue < 0) {
+        inputElement.value = "0";
+    } else if (inputElement.value.length > 2) {
+        inputElement.value = "0";
+    }
+}

@@ -19,7 +19,7 @@
     <div class="container">
         <form onsubmit="return false;">
             <label class="" for="guess">Guess the Number</label>
-            <input id="guess">
+            <input type="number" id="guess" oninput="validateInputFirst()">
             <input class="btn btn-primary" type="submit" onclick="guessNum()">
         </form>
         <button class="btn btn-primary" onclick="genNum()">Regenerate</button>
