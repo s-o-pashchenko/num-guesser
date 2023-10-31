@@ -21,8 +21,11 @@ function guessNum() {
     // Check if the user's guess matches the secret number
     if (userGuess == secretNum) {
         alert("You guessed correctly!"); // Notify the user of a correct guess
-    } else {
-        alert("No, you're wrong. Try again."); // Notify the user of an incorrect guess
+        genNum(); // new random number
+    } else if (userGuess > secretNum) {
+        alert("No, you're wrong, It is too high. Try again."); // Notify the user of an incorrect guess
+    } else if (userGuess < secretNum) {
+        alert("No, you're wrong, It is too low. Try again."); // Notify the user of an incorrect guess        
     }
 }
 
